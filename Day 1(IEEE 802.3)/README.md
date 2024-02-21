@@ -47,7 +47,31 @@ The frame format of classic Ethernet and IEEE 802.3 consists of several key fiel
 
 Overall, the frame format of classic Ethernet and IEEE 802.3 provides essential components for data transmission, including addressing, data payload, error detection, and synchronization mechanisms. The differences between classic Ethernet and IEEE 802.3 lie mainly in the preamble length and the presence of the start of frame delimiter. These standards ensure reliable communication over Ethernet networks.
 
-## Install
+## Sending Ethernet Frames using Scapy
+
+This Python script demonstrates how to use Scapy to craft and send Ethernet frames.
+
+## Instructions
+
+1. Ensure you have Scapy installed. If not, you can install it via pip:
+    ```bash
+    pip install scapy
+    ```
+
+2. Copy the following Python code snippet into your Python script:
+
+```python
+from scapy.all import Ether, sendp
+
+# Craft an Ethernet frame
+ether_frame = Ether(dst="ff:ff:ff:ff:ff:ff", src="00:11:22:33:44:55")
+
+# Print the summary of the frame
+print("Ethernet Frame Summary:")
+print(ether_frame.summary())
+
+# Send the frame
+sendp(ether_frame, iface="eth0")
 
 ```sh
 <%= installCommand %>
