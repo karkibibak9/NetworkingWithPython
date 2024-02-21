@@ -7,16 +7,15 @@ Welcome to Networking With Scapy, a Python project focused on studying and imple
 ### Motive
 The primary goal of this project is to deepen understanding and practical skills in networking by exploring different layers of the OSI model and implementing them using Scapy. By leveraging Scapy's capabilities, we can craft, send, receive, and analyze packets at different network layers, enabling us to grasp fundamental concepts more effectively.
 
-## Day 2
-### Sending Ethernet Frames using Scapy
-This Python script demonstrates how to use Scapy to craft and send Ethernet frames.
-
 #### Instructions
 1. Ensure you have Scapy installed. If not, you can install it via pip:
 
     ```
     pip install scapy
     ```
+
+## Day 2
+
 
 # Sending Payload using Scapy over Ethernet
 
@@ -59,9 +58,9 @@ Sending Frame: Finally, the Ethernet frame is sent over the network interface (e
 # Sniffing Payload using Scapy over Ethernet
 
 ## Introduction
-This Python script demonstrates how to use Scapy to send payloads over Ethernet frames. The script utilizes Scapy's packet crafting capabilities to construct Ethernet frames with custom payloads and sends them over the network interface specified.
 
-## Code Explanation
+This Python script demonstrates how to use Scapy to sniff  Ethernet frames with a custom payload.
+
 ```python
 # Importing Scapy
 from scapy.all import sniff, Ether, Raw
@@ -89,6 +88,14 @@ def packet_handler(packet):
 print("Sniffing for Ethernet Frames...")
 sniff(prn=packet_handler, count=25, iface="eth0")
 ```
+
+## Code Explanation
+
+The function extracts source and destination MAC addresses from Ethernet frames.
+It attempts to decode the payload using UTF-8 encoding.
+If successful, it prints the destination MAC address and the decoded payload.
+If decoding fails (due to a non-UTF-8 payload), it prints an error message with the source MAC address.
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
