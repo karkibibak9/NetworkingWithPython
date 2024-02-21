@@ -60,66 +60,48 @@ This Python script demonstrates how to use Scapy to craft and send Ethernet fram
 
 2. Copy the following Python code snippet into your Python script:
 
-```python
+```
+#importing Scapy
 from scapy.all import Ether, sendp
 
-# Craft an Ethernet frame
-ether_frame = Ether(dst="ff:ff:ff:ff:ff:ff", src="00:11:22:33:44:55")
+#Creating Ethernet Frame
+ether_Frame = Ether(dst="ff:ff:ff:ff:ff:ff", src="00:55:88:55:44")
 
-# Print the summary of the frame
-print("Ethernet Frame Summary:")
-print(ether_frame.summary())
+print("Ethernet_Frame Summery:")
+print(ether_Frame.summary())
 
-# Send the frame
-sendp(ether_frame, iface="eth0")
-
-```sh
-<%= installCommand %>
+#sending the Frame
+sendp(ether_Frame, iface="eth0")
 ```
-<% } -%>
-<% if (usage) { -%>
+# Sniffing Ethernet Frames with Scapy
 
-## Usage
+This Python script demonstrates how to use Scapy to sniff Ethernet frames and extract header information.
 
-```sh
-<%= usage %>
+## Instructions
+
+1. Copy the following Python code snippet into your Python script:
+
+```python
+#importing Scapy
+from scapy.all import sniff, Ether
+
+#defining the callback function to handle incoming packets
+def packet_caller(packet):
+    if packet.haslayer(Ether):
+        #Extracting the Header Information
+        src_address = packet[Ether].src
+        dst_address = packet[Ether].dst
+        print(f"Source MAC Address {src_address}, Destination MAC address: {dst_address}")
+
+#sniffing from Ethernet Frame
+print("Sniffing for Ethernet Frames...")
+sniff(prn=packet_caller, iface="eth0", count=10)
 ```
-<% } -%>
-<% if (testCommand) { -%>
-
-## Run tests
-
-```sh
-<%= testCommand %>
-```
-<% } -%>
-<% if (authorName || authorTwitterUsername || authorGithubUsername) { -%>
-
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check [issues page](<%= issuesUrl %>). <%= contributingUrl ? `You can also take a look at the [contributing guide](${contributingUrl}).` : '' %>
-<% } -%>
 
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-<% if (authorPatreonUsername) { -%>
-
-[![support us](https://img.shields.io/badge/become-a patreon%20us-orange.svg?cacheSeconds=2592000)](https://www.patreon.com/<%= authorPatreonUsername %>)
-<% } -%>
-
-<% if (licenseName && licenseUrl) { -%>
-
-## 📝 License
-
-<% if (authorName && authorGithubUsername) { -%>
-Copyright © <%= currentYear %> [<%= authorName %>](https://github.com/<%= authorGithubUsername %>).
-
-<% } -%>
-This project is [<%= licenseName %>](<%= licenseUrl %>) licensed.
-<% } -%>
-
-***
-<%- include('footer.md'); -%>
