@@ -22,7 +22,6 @@ This Python script demonstrates how to use Scapy to craft and send Ethernet fram
 
 This Python script demonstrates how to use Scapy to craft and send Ethernet frames with a custom payload.
 
-## Code Explanation
 
 ```python
 from scapy.all import Ether, sendp, Raw
@@ -43,8 +42,21 @@ print(ether_frame.summary())
 # Sending the Ethernet Frame
 sendp(ether_frame, iface="eth0")
 ```
+## Code Explanation
+User Input: The script prompts the user to enter a payload message.
 
-# Sending Payload using Scapy over Ethernet
+Encoding Payload: The user-provided message is converted into bytes so it can be sent over the network.
+
+Crafting Ethernet Frame: An Ethernet frame is created with the following details:
+
+Destination MAC address: Set to broadcast (ff:ff:ff:ff:ff:ff), indicating that the frame should be delivered to all devices on the network.
+Source MAC address: A custom MAC address (11:22:33:44:55:66) is used to identify the sender.
+Payload: The encoded user input is set as the payload of the Ethernet frame.
+Printing Summary: The script prints a summary of the crafted Ethernet frame.
+
+Sending Frame: Finally, the Ethernet frame is sent over the network interface (eth0).
+
+# Sniffing Payload using Scapy over Ethernet
 
 ## Introduction
 This Python script demonstrates how to use Scapy to send payloads over Ethernet frames. The script utilizes Scapy's packet crafting capabilities to construct Ethernet frames with custom payloads and sends them over the network interface specified.
