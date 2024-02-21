@@ -1,6 +1,5 @@
 # Networking With Scapy 👋
 
-# Networking With Scapy 👋
 
 ## Project Description
 Welcome to Networking With Scapy, a Python project focused on studying and implementing various networking layers using Scapy. This project aims to provide a hands-on learning experience in networking protocols and packet manipulation techniques.
@@ -8,7 +7,7 @@ Welcome to Networking With Scapy, a Python project focused on studying and imple
 ### Motive
 The primary goal of this project is to deepen understanding and practical skills in networking by exploring different layers of the OSI model and implementing them using Scapy. By leveraging Scapy's capabilities, we can craft, send, receive, and analyze packets at different network layers, enabling us to grasp fundamental concepts more effectively.
 
-## Day 1
+## Day 2
 ### Sending Ethernet Frames using Scapy
 This Python script demonstrates how to use Scapy to craft and send Ethernet frames.
 
@@ -42,7 +41,8 @@ print("Ethernet Frame Summary:")
 print(ether_frame.summary())
 
 # Sending the Ethernet Frame
-sendp(ether_frame, iface="eth0")```
+sendp(ether_frame, iface="eth0")
+```
 
 # Sending Payload using Scapy over Ethernet
 
