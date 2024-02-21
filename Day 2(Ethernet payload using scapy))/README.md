@@ -94,7 +94,7 @@ sniff(prn=packet_handler, count=25, iface="eth0")
 The function extracts source and destination MAC addresses from Ethernet frames.
 It attempts to decode the payload using UTF-8 encoding.
 If successful, it prints the destination MAC address and the decoded payload.
-If decoding fails (due to a non-UTF-8 payload), it prints an error message with the source MAC address.
+If decoding fails (due to a non-UTF-8 payload), it prints an error message with the source MAC address;
 
 ## 🤝 Contributing
 
