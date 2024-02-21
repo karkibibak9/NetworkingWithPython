@@ -42,16 +42,16 @@ print(ether_frame.summary())
 sendp(ether_frame, iface="eth0")
 ```
 ## Code Explanation
-User Input: The script prompts the user to enter a payload message.
+User Input: The script prompts the user to enter a payload message.\
 
-Encoding Payload: The user-provided message is converted into bytes so it can be sent over the network.
+Encoding Payload: The user-provided message is converted into bytes so it can be sent over the network.\
 
-Crafting Ethernet Frame: An Ethernet frame is created with the following details:
+Crafting Ethernet Frame: An Ethernet frame is created with the following details:\
 
-Destination MAC address: Set to broadcast (ff:ff:ff:ff:ff:ff), indicating that the frame should be delivered to all devices on the network.
-Source MAC address: A custom MAC address (11:22:33:44:55:66) is used to identify the sender.
-Payload: The encoded user input is set as the payload of the Ethernet frame.
-Printing Summary: The script prints a summary of the crafted Ethernet frame.
+Destination MAC address: Set to broadcast (ff:ff:ff:ff:ff:ff), indicating that the frame should be delivered to all devices on the network.\
+Source MAC address: A custom MAC address (11:22:33:44:55:66) is used to identify the sender.\
+Payload: The encoded user input is set as the payload of the Ethernet frame.\
+Printing Summary: The script prints a summary of the crafted Ethernet frame.\
 
 Sending Frame: Finally, the Ethernet frame is sent over the network interface (eth0).
 
@@ -91,9 +91,9 @@ sniff(prn=packet_handler, count=25, iface="eth0")
 
 ## Code Explanation
 
-The function extracts source and destination MAC addresses from Ethernet frames.
-It attempts to decode the payload using UTF-8 encoding.
-If successful, it prints the destination MAC address and the decoded payload.
+The function extracts source and destination MAC addresses from Ethernet frames.\
+It attempts to decode the payload using UTF-8 encoding.\
+If successful, it prints the destination MAC address and the decoded payload.\
 If decoding fails (due to a non-UTF-8 payload), it prints an error message with the source MAC address;
 
 ## 🤝 Contributing
