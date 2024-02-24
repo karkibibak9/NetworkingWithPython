@@ -25,35 +25,26 @@ IPv4 addresses are typically written in dotted-decimal notation, consisting of f
 The rapid growth of the internet and the increasing number of connected devices have led to a depletion of available IPv4 addresses. This scarcity has necessitated the development of IPv6.
 
 ## IPv4 Header Format:
- 0                   1                   2                   3   
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|Version|  IHL  |Type of Service|          Total Length         |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|         Identification        |Flags|      Fragment Offset    |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|  Time to Live |    Protocol   |       Header Checksum         |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                         Source Address                        |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                      Destination Address                      |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                    Options (if any)                          |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                   Padding (if necessary)                     |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-Version (4 bits): Indicates the version of IP being used. For IPv4, this field is set to 4.
-IHL (Internet Header Length) (4 bits): Specifies the length of the header in 32-bit words.
-Type of Service (8 bits): Originally intended for Quality of Service (QoS) parameters.
-Total Length (16 bits): Length of entire IP packet (header + data).
-Identification (16 bits): Unique value assigned to each packet for reassembly.
-Flags (3 bits) and Fragment Offset (13 bits): Used for fragmentation and reassembly of packets.
-Time to Live (8 bits): Prevents packets from circulating endlessly in the network.
-Protocol (8 bits): Specifies the protocol used in the data portion of the packet (e.g., TCP, UDP).
-Header Checksum (16 bits): Error-checking for the header.
-Source Address (32 bits) and Destination Address (32 bits): IPv4 addresses of the sender and recipient.
-Options (if any) (variable length): May include options such as timestamps or security information.
-Padding (if necessary): Added to ensure that the header is a multiple of 32 bits.
+
+
+| Field                 | Size (bits) | Description                              |
+|-----------------------|-------------|------------------------------------------|
+| Version               | 4           | Version of IP (IPv4 = 4)                 |
+| IHL (Header Length)  | 4           | Length of the header in 32-bit words     |
+| Type of Service (TOS)| 8           | Quality of Service parameters            |
+| Total Length          | 16          | Total length of the packet (header + data)|
+| Identification        | 16          | Unique value for packet reassembly       |
+| Flags                 | 3           | Flags for fragmentation control          |
+| Fragment Offset       | 13          | Offset of the fragment in the original datagram |
+| Time to Live (TTL)    | 8           | Limits packet lifetime in the network    |
+| Protocol              | 8           | Protocol used in the data portion (e.g., TCP, UDP) |
+| Header Checksum       | 16          | Error-checking for the header            |
+| Source Address        | 32          | IPv4 address of the sender               |
+| Destination Address   | 32          | IPv4 address of the recipient            |
+| Options               | Variable    | Optional fields for various purposes     |
+| Padding               | Variable    | Padding to ensure header is a multiple of 32 bits |
+
+
 
 ## IPv6 (Internet Protocol version 6):
 
@@ -63,36 +54,19 @@ IPv6 addresses are written in hexadecimal notation, consisting of eight groups o
 In addition to addressing the issue of address exhaustion, IPv6 offers other improvements such as simplified header format, better support for quality of service (QoS), and built-in security features.
 In summary, while IPv4 has been the backbone of the internet for many years, IPv6 represents the future of internet addressing, providing a vast pool of addresses to accommodate the ever-growing number of connected devices and ensuring the continued expansion and functionality of the internet. However, the transition from IPv4 to IPv6 has been gradual due to the need for compatibility and the complexity of upgrading existing infrastructure and systems.
 
-## IPv6 Header Format:
- 0                   1                   2                   3   
- 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|Version| Traffic Class |           Flow Label                  |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|         Payload Length        |  Next Header  |   Hop Limit    |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                                                               |
-+                                                               +
-|                                                               |
-+                         Source Address                        +
-|                                                               |
-+                                                               +
-|                                                               |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|                                                               |
-+                                                               +
-|                                                               |
-+                      Destination Address                      +
-|                                                               |
-+                                                               +
-|                                                               |
-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-Version (4 bits): Indicates the version of IP being used. For IPv6, this field is set to 6.
-Traffic Class (8 bits) and Flow Label (20 bits): Traffic class allows for packet prioritization, while flow label facilitates flow identification.
-Payload Length (16 bits): Length of the payload (data) portion of the packet.
-Next Header (8 bits): Specifies the type of the next header after the IPv6 header (e.g., TCP, UDP).
-Hop Limit (8 bits): Similar to Time to Live in IPv4, limits the number of hops a packet can traverse.
-Source Address (128 bits) and Destination Address (128 bits): IPv6 addresses of the sender and recipient.
+## IPv6 Header Format
+
+| Field                 | Size (bits) | Description                              |
+|-----------------------|-------------|------------------------------------------|
+| Version               | 4           | Version of IP (IPv6 = 6)                 |
+| Traffic Class         | 8           | Traffic class for packet prioritization  |
+| Flow Label            | 20          | Flow identification for specialized handling |
+| Payload Length        | 16          | Length of the payload (data) portion     |
+| Next Header           | 8           | Specifies the type of next header        |
+| Hop Limit             | 8           | Limits the number of hops a packet can traverse |
+| Source Address        | 128         | IPv6 address of the sender               |
+| Destination Address   | 128         | IPv6 address of the recipient            |
+
 
 
 # Sending Payload using Scapy over Ethernet
