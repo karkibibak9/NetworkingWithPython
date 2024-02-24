@@ -8,7 +8,7 @@ The primary goal of this project is to deepen understanding and practical skills
 
 
 ## Day 1 
-#IEEE 802.3
+## IEEE 802.3
 Ethernet is a set of technologies and protocols that are used primarily in LANs. It was first standardized in 1980s by IEEE 802.3 standard. IEEE 802.3 defines the physical layer and the medium access control (MAC) sub-layer of the data link layer for wired Ethernet networks.
 Ethernet is classified into two categories: classic Ethernet and switched Ethernet.
 ![ieee_802_3](https://github.com/karkibibak9/NetworkingWithPython/assets/47566089/69ea9516-253f-4ce1-8ec4-031c38213b6c)
