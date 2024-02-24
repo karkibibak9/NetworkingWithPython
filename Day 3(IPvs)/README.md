@@ -69,7 +69,23 @@ In summary, while IPv4 has been the backbone of the internet for many years, IPv
 
 
 
-# Sending Payload using Scapy over Ethernet
+# Sending TCP and UDP packets using Scapy over IPv4
+```
+from scapy.all import IP, TCP, UDP, send
+
+# Create an IPv4 packet with TCP protocol
+ipv4_tcp_packet = IP(src="192.168.1.2", dst="8.8.8.8") / TCP(dport=80)
+
+# Create an IPv4 packet with UDP protocol
+ipv4_udp_packet = IP(src="192.168.1.2", dst="8.8.8.8") / UDP(dport=53)
+
+# Send the TCP packet
+send(ipv4_tcp_packet)
+
+# Send the UDP packet
+send(ipv4_udp_packet)
+
+```
 
 ![image](https://github.com/karkibibak9/NetworkingWithPython/assets/47566089/d1d63450-3462-4603-b1e8-6df5443c6189)
 
