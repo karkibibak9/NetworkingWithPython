@@ -71,6 +71,7 @@ In summary, while IPv4 has been the backbone of the internet for many years, IPv
 
 # Sending Payload using Scapy over Ethernet
 
+![image](https://github.com/karkibibak9/NetworkingWithPython/assets/47566089/d1d63450-3462-4603-b1e8-6df5443c6189)
 
 
 ## 🤝 Contributing
