@@ -37,7 +37,7 @@ TCP is extensively used in various applications such as web browsing, email, fil
 It serves as the foundation for numerous protocols and services, including HTTP, FTP, SSH, and Telnet, facilitating reliable communication over the internet.
 ## Implementation:
 
-TCP functionality is typically implemented in software libraries, networking stacks, and operating systems, providing developers with APIs for creating networked applications.\
+TCP functionality is typically implemented in software libraries, networking stacks, and operating systems, providing developers with APIs for creating networked applications./
 
 Various programming languages offer TCP socket APIs for establishing TCP connections, sending and receiving data, and managing network communication.
 TCP's robustness, reliability, and versatility make it one of the most widely used protocols for transmitting data over networks, playing a vital role in modern internet communication.
