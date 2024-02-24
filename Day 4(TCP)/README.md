@@ -20,10 +20,10 @@ The primary goal of this project is to deepen understanding and practical skills
 TCP, an essential component of the Internet Protocol Suite, provides reliable, ordered, and error-checked delivery of data between applications running on hosts communicating via an IP network. It operates at the transport layer of the OSI model, facilitating communication between devices over a network.
 
 # Key Features:
-Reliability: TCP ensures that data is reliably delivered to the intended recipient by establishing a connection-oriented communication between sender and receiver. It guarantees that data is received in the correct order without errors, retransmitting any lost packets.
-Connection Establishment and Termination: TCP employs a three-way handshake mechanism for connection establishment, where both sender and receiver exchange synchronization (SYN) and acknowledgment (ACK) packets. Similarly, it gracefully terminates connections using a four-way handshake.
-Flow Control: TCP employs flow control mechanisms to prevent overwhelming the receiver with data. It uses sliding window techniques, dynamically adjusting the amount of data sent based on the receiver's buffer capacity.
-Congestion Control: TCP incorporates congestion control algorithms to manage network congestion, ensuring fair and efficient data transmission. It adjusts the transmission rate based on network conditions, avoiding network congestion and packet loss.
+Reliability: TCP ensures that data is reliably delivered to the intended recipient by establishing a connection-oriented communication between sender and receiver. It guarantees that data is received in the correct order without errors, retransmitting any lost packets.\
+Connection Establishment and Termination: TCP employs a three-way handshake mechanism for connection establishment, where both sender and receiver exchange synchronization (SYN) and acknowledgment (ACK) packets. Similarly, it gracefully terminates connections using a four-way handshake.\
+Flow Control: TCP employs flow control mechanisms to prevent overwhelming the receiver with data. It uses sliding window techniques, dynamically adjusting the amount of data sent based on the receiver's buffer capacity.\
+Congestion Control: TCP incorporates congestion control algorithms to manage network congestion, ensuring fair and efficient data transmission. It adjusts the transmission rate based on network conditions, avoiding network congestion and packet loss.\
 Full-Duplex Communication: TCP supports full-duplex communication, allowing data to be transmitted simultaneously in both directions. This enables bi-directional communication between client and server applications.
 ## Usage:
 TCP is extensively used in various applications such as web browsing, email, file transfer, and remote administration.
