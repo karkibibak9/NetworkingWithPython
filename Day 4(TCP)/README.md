@@ -21,23 +21,24 @@ TCP, an essential component of the Internet Protocol Suite, provides reliable, o
 
 # Key Features:
 
-Reliability: TCP ensures that data is reliably delivered to the intended recipient by establishing a connection-oriented communication between sender and receiver. It guarantees that data is received in the correct order without errors, retransmitting any lost packets.\
+Reliability: TCP ensures that data is reliably delivered to the intended recipient by establishing a connection-oriented communication between sender and receiver. It guarantees that data is received in the correct order without errors, retransmitting any lost packets.
 
-Connection Establishment and Termination: TCP employs a three-way handshake mechanism for connection establishment, where both sender and receiver exchange synchronization (SYN) and acknowledgment (ACK) packets. Similarly, it gracefully terminates connections using a four-way handshake.\
+Connection Establishment and Termination: TCP employs a three-way handshake mechanism for connection establishment, where both sender and receiver exchange synchronization (SYN) and acknowledgment (ACK) packets. Similarly, it gracefully terminates connections using a four-way handshake.
 
-Flow Control: TCP employs flow control mechanisms to prevent overwhelming the receiver with data. It uses sliding window techniques, dynamically adjusting the amount of data sent based on the receiver's buffer capacity.\
+Flow Control: TCP employs flow control mechanisms to prevent overwhelming the receiver with data. It uses sliding window techniques, dynamically adjusting the amount of data sent based on the receiver's buffer capacity.
 
-Congestion Control: TCP incorporates congestion control algorithms to manage network congestion, ensuring fair and efficient data transmission. It adjusts the transmission rate based on network conditions, avoiding network congestion and packet loss.\
+Congestion Control: TCP incorporates congestion control algorithms to manage network congestion, ensuring fair and efficient data transmission. It adjusts the transmission rate based on network conditions, avoiding network congestion and packet loss.
 
-Full-Duplex Communication: TCP supports full-duplex communication, allowing data to be transmitted simultaneously in both directions. This enables bi-directional communication between client and server applications.\
+Full-Duplex Communication: TCP supports full-duplex communication, allowing data to be transmitted simultaneously in both directions. This enables bi-directional communication between client and server applications.
 
 ## Usage:
-TCP is extensively used in various applications such as web browsing, email, file transfer, and remote administration.\
+TCP is extensively used in various applications such as web browsing, email, file transfer, and remote administration.
 
 It serves as the foundation for numerous protocols and services, including HTTP, FTP, SSH, and Telnet, facilitating reliable communication over the internet.
+
 ## Implementation:
 
-TCP functionality is typically implemented in software libraries, networking stacks, and operating systems, providing developers with APIs for creating networked applications./
+TCP functionality is typically implemented in software libraries, networking stacks, and operating systems, providing developers with APIs for creating networked applications.
 
 Various programming languages offer TCP socket APIs for establishing TCP connections, sending and receiving data, and managing network communication.
 TCP's robustness, reliability, and versatility make it one of the most widely used protocols for transmitting data over networks, playing a vital role in modern internet communication.
