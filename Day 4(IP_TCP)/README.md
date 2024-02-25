@@ -32,6 +32,7 @@ Congestion Control: TCP incorporates congestion control algorithms to manage net
 Full-Duplex Communication: TCP supports full-duplex communication, allowing data to be transmitted simultaneously in both directions. This enables bi-directional communication between client and server applications.
 
 ## Usage:
+
 TCP is extensively used in various applications such as web browsing, email, file transfer, and remote administration.
 
 It serves as the foundation for numerous protocols and services, including HTTP, FTP, SSH, and Telnet, facilitating reliable communication over the internet.
