@@ -14,9 +14,6 @@ The primary goal of this project is to deepen understanding and practical skills
     pip install scapy
     ```
 
-## Day 3 
-
-
 ## IPv4 (Internet Protocol version 4):
 
 IPv4 is the fourth version of the Internet Protocol, and it has been the dominant protocol used on the internet for several decades.

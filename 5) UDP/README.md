@@ -14,7 +14,6 @@ The primary goal of this project is to deepen understanding and practical skills
     pip install scapy
     ```
 
-## Day 4
 
 ## Transmission Control Protocol (TCP)
 TCP, an essential component of the Internet Protocol Suite, provides reliable, ordered, and error-checked delivery of data between applications running on hosts communicating via an IP network. It operates at the transport layer of the OSI model, facilitating communication between devices over a network.
