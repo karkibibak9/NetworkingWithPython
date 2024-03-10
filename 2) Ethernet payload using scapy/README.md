@@ -14,7 +14,6 @@ The primary goal of this project is to deepen understanding and practical skills
     pip install scapy
     ```
 
-## Day 2
 
 
 # Sending Payload using Scapy over Ethernet

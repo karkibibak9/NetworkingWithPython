@@ -7,7 +7,6 @@ Welcome to Networking With Scapy, a Python project focused on studying and imple
 The primary goal of this project is to deepen understanding and practical skills in networking by exploring different layers of the OSI model and implementing them using Scapy. By leveraging Scapy's capabilities, we can craft, send, receive, and analyze packets at different network layers, enabling us to grasp fundamental concepts more effectively.
 
 
-## Day 1 
 ## IEEE 802.3
 Ethernet is a set of technologies and protocols that are used primarily in LANs. It was first standardized in 1980s by IEEE 802.3 standard. IEEE 802.3 defines the physical layer and the medium access control (MAC) sub-layer of the data link layer for wired Ethernet networks.
 Ethernet is classified into two categories: classic Ethernet and switched Ethernet.
