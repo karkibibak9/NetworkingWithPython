@@ -1,12 +1,12 @@
-# 30-Day GitHub Challenge
+# Networking with Python
 
-Welcome to my 30-day GitHub challenge! In this repository, I'll be documenting my journey over the next 30 days as I tackle various coding and learning tasks.
+This repository contains Python scripts for practicing different network protocols using Scapy.
 
-## Day-wise Progress
+## Protocols:
 
-
-- [Day 01](Day%201%28IEEE%20802.3%29%2FREADME.md): Learning about IEEE 802.3 and its implementation in Python scapy.
-- [Day 2(Ethernet payload using scapy)](Day%202(Ethernet%20payload%20using%20scapy)/README.md): Description of what I did on Day 30.
-
-
-- [Day 30](Day-30/README.md): Description of what I did on Day 30.
+1. [IEEE 802.3](https://github.com/karkibibak9/NetworkingWithPython/tree/main/1%29%20IEEE%20802.3)
+2. [Ethernet payload using Scapy](https://github.com/karkibibak9/NetworkingWithPython/tree/main/2%29%20Ethernet%20payload%20using%20Scapy)
+3. [IPvs](https://github.com/karkibibak9/NetworkingWithPython/tree/main/3%29%20IPvs)
+4. [TCP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/4%29%20TCP)
+5. [UDP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/5%29%20UDP)
+6. [ICMP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/6%29%20ICMP)
