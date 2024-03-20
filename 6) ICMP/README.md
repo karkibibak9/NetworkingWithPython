@@ -1,6 +1,5 @@
 # Networking With Scapy 👋
 
-
 ## Project Description
 Welcome to Networking With Scapy, a Python project focused on studying and implementing various networking layers using Scapy. This project aims to provide a hands-on learning experience in networking protocols and packet manipulation techniques.
 
@@ -10,61 +9,45 @@ The primary goal of this project is to deepen understanding and practical skills
 #### Instructions
 1. Ensure you have Scapy installed. If not, you can install it via pip:
 
-    ```
+    ```bash
     pip install scapy
     ```
 
-## User Datagram Protocol (UDP)
+## Internet Control Message Protocol (ICMP)
 
-UDP, another vital protocol within the Internet Protocol Suite, offers a connectionless and unreliable means of data transmission between applications running on hosts communicating via an IP network. It functions at the transport layer of the OSI model, enabling communication between devices over a network.
+ICMP, a crucial protocol within the Internet Protocol Suite, facilitates communication between network devices to convey error messages and control information. It operates at the network layer of the OSI model, providing feedback about packet delivery and network status.
 
 ### Key Features:
 
-1. **Connectionless Communication**: Unlike TCP, UDP does not establish a connection before sending data. It operates on a fire-and-forget basis, where packets are sent without prior setup.
+1. **Error Reporting**: ICMP is primarily used for reporting errors encountered during packet processing or network operation. It enables routers and hosts to communicate error conditions to other devices.
 
-2. **Unreliable Delivery**: UDP does not guarantee the delivery of data packets. It lacks mechanisms for acknowledgment, retransmission, and error correction, making it susceptible to packet loss.
+2. **Diagnostic Tools**: ICMP supports diagnostic tools such as ping and traceroute, which help in testing connectivity, measuring round-trip times, and identifying network issues.
 
-3. **Low Overhead**: UDP has minimal overhead compared to TCP, as it does not maintain connection state information or perform error recovery. This makes it suitable for applications prioritizing low-latency communication.
+3. **Echo Requests and Replies**: ICMP allows hosts to send echo request messages to another host, which responds with an echo reply message. This functionality is utilized by the ping utility for testing network reachability.
 
-4. **Simple Header Structure**: UDP packets consist of a lightweight header containing source and destination port numbers and a length field, contributing to faster packet processing and transmission.
-
-5. **Broadcast and Multicast Support**: UDP supports broadcast and multicast communication, allowing packets to be sent to multiple recipients simultaneously.
+4. **Network Management**: ICMP includes messages for network management tasks, such as redirecting traffic, informing about unreachable destinations, and managing multicast groups.
 
 ### Usage:
 
-UDP finds applications in scenarios where real-time data transmission and low-latency communication are critical, such as audio/video streaming, online gaming, DNS, and Voice over IP (VoIP).
-
-It is preferred for applications where occasional packet loss or out-of-order delivery is acceptable, trading reliability for reduced latency.
+ICMP is commonly used for troubleshooting network connectivity issues, diagnosing network problems, and managing network traffic. It provides essential feedback mechanisms for ensuring efficient packet delivery and network operation.
 
 ### Implementation:
 
-UDP functionality is implemented in software libraries, networking stacks, and operating systems, providing developers with APIs for creating networked applications.
+ICMP functionality is integrated into networking stacks and operating systems, providing support for generating and processing ICMP messages. Developers can utilize ICMP APIs for implementing network diagnostic tools and error handling mechanisms.
 
-Programming languages offer UDP socket APIs for establishing communication endpoints, sending and receiving datagrams, and handling UDP packet transmission.
+Programming languages offer libraries and modules for interacting with ICMP packets, enabling developers to create custom network management applications and diagnostic utilities.
 
-UDP's lightweight nature and simplicity make it suitable for applications requiring fast and efficient data transmission, albeit at the cost of reliability compared to TCP.
+ICMP's role in providing error reporting and network diagnostics contributes to efficient network troubleshooting and management, enhancing the reliability and performance of networked systems.
 
-## In UDP packets, specifying a source port is optional. If you don't specify a source port, the operating system's networking stack will automatically assign a source port for the outgoing UDP packet.
+## Sending ICMP packets using Scapy over IPv4
+```python
+from scapy.all import IP, ICMP, send
 
-# Sending UDP packets using Scapy over IPv4
-```
-from scapy.all import IP, TCP, UDP, send
+# Create an IPv4 packet with ICMP protocol (Echo Request)
+ipv4_icmp_packet = IP(src="192.168.1.2", dst="8.8.8.8") / ICMP(type=8, code=0)  # Type 8 for Echo Request, Code 0 for default
 
-# Create an IPv4 packet with TCP protocol
-ipv4_tcp_packet = IP(src="192.168.1.2", dst="8.8.8.8") / TCP(dport=80)
-
-# Create an IPv4 packet with UDP protocol
-ipv4_udp_packet = IP(src="192.168.1.2", dst="8.8.8.8") / UDP(dport=53)
-
-# Send the TCP packet
-send(ipv4_tcp_packet)
-
-# Send the UDP packet
-send(ipv4_udp_packet)
-
-```
-
-![image](https://github.com/karkibibak9/NetworkingWithPython/assets/47566089/d1d63450-3462-4603-b1e8-6df5443c6189)
+# Send the ICMP packet
+send(ipv4_icmp_packet)
 
 
 ## 🤝 Contributing
