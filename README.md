@@ -21,6 +21,19 @@ This repository contains Python scripts for practicing different network protoco
     </details>
 
     - [Ethernet payload using Scapy](https://github.com/karkibibak9/NetworkingWithPython/tree/main/2%29%20Ethernet%20payload%20using%20Scapy): This script focuses on creating Ethernet frames and customizing their payloads using Scapy.
+    <details>
+    <summary><b>Script: Crafted_payload_Reading_over_Ethernet_Frame.py</b></summary>
+
+    Sniffing Ethernet frames, extracting MAC addresses.
+
+    </details>
+
+    <details>
+    <summary><b>Script: Crafting_playload_in_Ethernet.py</b></summary>
+
+    Creating and sending Ethernet frame.
+
+    </details>
 
 2. **Network Layer (Layer 3):** 
     - [IPvs](https://github.com/karkibibak9/NetworkingWithPython/tree/main/3%29%20IPvs): This protocol operates at the network layer and includes both IPv4 and IPv6 protocols.
