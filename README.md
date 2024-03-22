@@ -37,10 +37,29 @@ This repository contains Python scripts for practicing different network protoco
 
 2. **Network Layer (Layer 3):** 
     - [IPvs](https://github.com/karkibibak9/NetworkingWithPython/tree/main/3%29%20IPvs): This protocol operates at the network layer and includes both IPv4 and IPv6 protocols.
+    <details>
+    <summary><b>Script: iprequest.py</b></summary>
+
+    Sending TCP and UDP packets using Scapy over IPv4.
+
+    </details>
 
 3. **Transport Layer (Layer 4):** 
     - [TCP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/4%29%20TCP): Transmission Control Protocol (TCP) is a connection-oriented protocol that operates at the transport layer. The script demonstrates TCP packet creation and manipulation using Scapy.
+    <details>
+    <summary><b>Script: TCPpackets.py</b></summary>
+
+    Sending TCP packets using Scapy over IPv4.
+
+    </details>
+
     - [UDP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/5%29%20UDP): User Datagram Protocol (UDP) is a connectionless protocol that operates at the transport layer. The script showcases UDP packet creation and manipulation using Scapy.
+    <details>
+    <summary><b>Script: UDPpacket.py</b></summary>
+
+    Sending UDP packets using Scapy over IPv4.
+
+    </details>
 
 4. **Internet Layer (Layer 3):**
     - [ICMP](https://github.com/karkibibak9/NetworkingWithPython/tree/main/6%29%20ICMP): Internet Control Message Protocol (ICMP) is used for diagnostic and control purposes within IP networks. The script focuses on ICMP packet creation and manipulation using Scapy.
